@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Heather Alicia</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/letter-h-icon-png-27.png" rel="icon">
+  <link href="assets/img/letter-h-icon-png-27.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+<!-- Modal for Power Off -->
+<div class="modal fade" id="powerOffModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Message from Heather Alicia:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Why would you try to turn me off?
+            </div>
+<!--hello-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Popup Banner -->
+  <div id="popup-banner" class="popup-banner">
+    <p>This site is owned and designed by <b>Heather Alicia</b>. For content release, please refer to the contact information below.</p>
+    <button id="close-banner" class="close-banner-btn">Close</button>
+  </div>
+
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Resume & Projects</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li class="dropdown">
+            <a href="#"><span>More</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#services">Volunteering</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#stats" id="stats-link">Stats</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle">
+        <i class="bi bi-sun"></i> <!-- Sun icon -->
+        <i class="bi bi-moon"></i> <!-- Moon icon -->
+      </button>
+    </div>
+  </header>
+
+  </header>
+
+  <main class="main">
+
+    <section id="hero" class="hero section dark-background">
+      <video id="hero-video" autoplay loop muted playsinline data-aos="fade-in">
+        <source src="assets/img/p4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <!-- Add an img tag for PNG sleep mode -->
+      <img id="hero-img" src="" alt="Sleep Mode" style="display:none; width:100%; height:100%;" data-aos="fade-in">
+      
+      <div class="container d-flex flex-column align-items-start justify-content-center text-left" style="padding-left: 75px; padding-right: 0; margin-left: 0; padding-top: 300px;" data-aos="fade-up" data-aos-delay="100">
+        <h2>Heather Alicia</h2>
+        <p><span class="typed" data-typed-items="Software Manager @ Boeing, Data Analyst @ NASA, Product Manager @ StormwaterGO"></span></p>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section accent-background">
+
+      <img src="assets/img/space.jpg" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/jules.jpg" class="testimonial-img" alt="">
+                <h3>Julianna Sookhoo Smith</h3>
+                <h4>Masters of Information Systems student at BYU Marriott School of Business | Brigham Young University | Advertising Specialist</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Heather is an amazing friend as well as a colleague. During our time at the Marriott School of Business at BYU, we formed a strong bond due to her friendly and caring nature. She has demonstrated not only a deep understanding of Information Systems, helping me progress in my education, but also her ability to work effectively in groups. Heather’s drive to study, complete assignments, and advance in her career has motivated me to prioritize my education. She consistently put forth her best work, even when faced with challenges. I am confident that Heather will continue to be successful in her future endeavors, and I highly recommend her for any opportunity she pursues.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/jimmy.jpg" class="testimonial-img" alt="">
+                <h3>Jimmy Diaz</h3>
+                <h4>Master of Information Systems Management Student at BYU ◆ Interested in Cybersecurity, IT, and Cloud Services</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Working with Heather was a great experience. She was an amazing asset to our team. Someone who demonstrates profound professionalism, kindness, and acceptance, Heather knows how to be a team player. She is very persistent and will drop anything to further the progress of the team. Heather is also very creative and consistently creates complex solutions to difficult problems. Her positive attitude and dedication make her a valuable asset to any team she is a part of. I highly recommend Heather for any position or project that she chooses to pursue.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/cameron.jpg" class="testimonial-img" alt="">
+                <h3>Cammeron Hammond</h3>
+                <h4>Web Developer and Data Analyst at Brigham Young University Marriott School of Business</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>"I have had the pleasure of working with Heather Alicia during our time at BYU, and I am continually impressed by her multifaceted skill set, work ethic, and leadership. Heather excels in both the technical and business aspects of her roles, seamlessly bridging the gap between software development and strategic business outcomes. Her proficiency in technologies like Python, JavaScript, and cloud platforms, coupled with her experience in leading cross-functional teams, make her a standout Software Manager. Heather’s ability to balance complex projects while fostering a collaborative environment speaks volumes about her dedication and capability. Any team would greatly benefit from her innovation, analytical mindset, and commitment to delivering high-quality results.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+
+
+      <!-- Hero Section -->
+      <section id="hero2" class="hero section dark-background">
+
+        <img id="hero-image-2" src="assets/img/pic9.png" alt="" data-aos="fade-in">
+
+        <div class="container d-flex flex-column align-items-start justify-content-center text-left" style="padding-left: 400px; padding-right: 0; margin-left: 0; padding-top: 0px;" data-aos="fade-up" data-aos-delay="100">
+          <h2>About, Resume, and Portfolio</h2>
+          <p><span class="typed" data-typed-items="Software Manager @ Boeing, Data Analyst @ NASA, Product Manager @ StormwaterGO"></span></p>
+          <p><span class="typed" data-typed-items="Boeing, NASA"></span></p>
+        </div>
+
+      </section><!-- /Hero Section -->
+<br>
+
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+      <div class="col-md-6">       
+
+        <div class="skills-content skills-animation">
+
+          <h5>Soft Skills</h5>
+          <ul>
+            <li><strong>Cross-functional collaboration</strong>: I work effectively with teams across engineering, marketing, and business to align on shared goals and deliver impactful products.</li>
+            <li><strong>Strategic thinking</strong>: I bring a results-driven mindset to planning and execution, ensuring both short-term wins and long-term success.</li>
+            <li><strong>Customer-focused problem solving</strong>: I prioritize user needs and feedback in the development process to craft solutions that meet real-world challenges.</li>
+            <li><strong>Adaptability</strong>: I thrive in fast-paced environments, balancing multiple projects while responding to evolving market demands and technological advancements.</li>
+            <li><strong>Leadership and communication</strong>: I foster a collaborative team atmosphere and clearly articulate product vision and roadmaps to stakeholders.</li>
+          </ul>
+          
+          <h5>Hard Skills</h5>
+          <div class="progress">
+            <span class="skill"><span>JavaScript</span> <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Python</span> <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>C#</span> <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>React</span> <i class="val">60%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>SQL</span> <i class="val">95%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>AWS</span> <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>pandas</span> <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Tableau</span> <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Azure</span> <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Typescript</span> <i class="val">65%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Git</span> <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="about-me">
+          <h4><u>About</u></h4>
+          <br>
+          <p>As a multifaceted technology leader with a rich blend of technical expertise and business acumen, I’ve spent the last several years bridging the gap between software development and strategic innovation. With over three years of full-time experience in roles ranging from Software Management to Data Analysis, and eight years of business-related roles, I’ve developed a unique ability to translate complex technical concepts into actionable strategies that drive both innovation and operational efficiency.</p>
+
+          <p>At Boeing, I currently serve as a Software Manager, where I’ve led enterprise-level initiatives focused on integrating cloud solutions, enhancing cybersecurity, and optimizing software applications for cost savings and performance. These efforts have consistently ensured that critical projects were delivered on time and within budget, while meeting stringent compliance and security standards.</p>
+          
+          <p>Prior to this, I had the opportunity to work with NASA as a Data Analyst Intern, where I contributed to space exploration initiatives by leveraging data science and predictive analytics to solve mission-critical challenges. My experience in technical roles like this, combined with my background as a Facilities Analyst and Product Manager Intern, has given me a holistic perspective on the ways technology can be harnessed to solve real-world problems.</p>
+          
+          <p>In addition to my technical work, I’m also passionate about mentoring and talent development. As a BYU-Boeing Ambassador, I actively work to recruit and mentor young talent, particularly in the fields of aerospace and technology. I take pride in fostering a culture of innovation and growth within my teams, always striving to empower others to push boundaries and think creatively.</p>
+          
+          <p>Beyond my professional roles, I am deeply committed to continuous learning and personal growth. Currently pursuing a degree in Information Systems Management, I’ve had the chance to study Machine Learning, Predictive Analytics, Database Systems, and Programming, skills I continue to refine and integrate into my work.</p>
+          
+          <p>Driven by a love for both technology and human-centered solutions, I aim to continue making an impact in roles where I can lead transformative projects that merge technical sophistication with strategic vision. Whether it’s optimizing enterprise software, developing cutting-edge data solutions, or leading cross-functional teams, my goal is to leave a lasting impact on the technology landscape.</p>
+                  
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+<!-- Resume Section -->
+<section id="resume" class="resume section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <a href="assets/HeatherAlicia'sResume.pdf" class="btn" download>Download PDF Resume</a>
+  </div><!-- End Section Title -->
+  <div class="container">
+    <div class="row">
+      <!-- Left Column: Summary and Education -->
+      <div class="col-md-6" id="resume-left">
+        <h3 class="resume-title">Summary</h3>
+        <div class="resume-item">
+          <h4>Heather Alicia Harris</h4>
+          <p><em>Multifaceted leader with 3 years of technical expertise and 8 years of business leadership. Delivered $1M+ in cost savings through efficiency initiatives in aerospace. Skilled in full-stack development, data analysis, and project ownership. Led cross-functional teams and implemented enterprise software solutions. Recruited and mentored talent as a BYU-Boeing Ambassador.</em></p>
+          <ul>
+            <li>Salt Lake City, UT</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>B.S. Information Systems Management</h4>
+          <h4>Marrriott School of Business</h4>
+          <h5>2021-2024</h5>
+          <p><em>Brigham Young University, Provo, UT</em></p>
+          - President, Product Management Society<br>
+          - Member, Association for Information Systems, Business Strategy Society, Women in Management<br>
+          - Violinist, BYU Symphony Orchestra<br>
+            <br><strong>Key Coursework:</strong> Key Coursework: Machine Learning (supervised/unsupervised learning, neural networks), Predictive Analytics (statistical models, business data analysis), Database Systems (SQL, MySQL, PostgreSQL, query optimization), Data Communication (network architecture, security, optimization), Programming (Python, JavaScript, TypeScript, C#), Enterprise Application Development (Node.js, Express.js, React), Information Systems Security (encryption, risk management, compliance).
+          </div>
+      
+          <h3 class="resume-title">Professional Experience</h3>
+          <div class="resume-item">
+            <h4>Software Manager</h4>
+            <h5>August 2023 – Present</h5>
+            <p><em>Boeing, Remote</em></p>
+            <ul>
+              <li>Diagnosed and mitigated revenue losses exceeding $15,000 monthly by analyzing Geotab KPI reports and
+                implementing a fleet management plan, generating over $600,000 annually across fleet of 1,000 vehicles</li>
+              <li>Spearheaded enterprise-wide Geotab telematics deployment, securing funding and collaborating with cross-functional
+                teams to boost vehicle tracking by 40%. Led expansion to 3 new sites, overseeing installation and ensuring
+                cybersecurity compliance for 16 software applications</li>
+            </ul>
+          </div>
+  
+        </div><!-- End Left Column -->
+
+      <!-- Right Column: Experience -->
+      <div class="col-md-6" id="resume-right">
+        <div class="resume-item"><br>
+          <h4>Data Analyst Intern</h4>
+          <h5>June 2023 – August 2023</h5>
+          <p><em>NASA, Remote</em></p>
+          <ul>
+            <li>Engineered an 8-page interactive dashboard in Looker Studio to track and optimize power usage effectiveness for
+              Computational Research Facility, cutting energy consumption by 27%</li>
+            <li>Designed data visualizations to scrutinize IT and facility load trends, formulating several actionable solutions to lower
+              overall facility power usage effectiveness ratio from 1.50 to 1.10</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <h4>Technical Analyst Intern</h4>
+          <h5>May 2022 – August 2023</h5>
+          <p><em>Boeing, Mesa, AZ</em></p>
+          <ul>
+            <li>Developed internal websites using JavaScript technologies, refining department audit processes, and yielding annual
+              savings of $200,000+. Reduced analyst workload by 35% by leveraging data scrubbing and automation tools,
+              including Node.js, React, and SQL</li>
+            <li>Orchestrated automated data cleansing workflows integrated with asset management systems (Maximo), saving over
+              25 hours quarterly and elevating operational productivity</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Technical Product Management Intern</h4>
+          <h5>January 2022 – April 2022</h5>
+          <p><em>StormwaterGO, Orem UT</em></p>
+          <ul>
+            <li>Revamped company’s website, boosting customer retention by over 30% through full-stack development, UX
+              enhancements, and refined SEO</li>
+            <li>Authored 75-page strategic report for leadership, recommending revenue growth strategies leveraging Google
+              AdWords, SEO, and multi-channel media platforms</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>College Advisor</h4>
+          <h5>October 2021 – April 2022</h5>
+          <p><em>BYU Ira. A Fulton College of Engineering, Provo, UT</em></p>
+          <ul>
+            <li>Mentored 350 students in academic and career success, fostering a 20% increase in student engagement & satisfactioL</li>
+            <li>Streamlined data organization and improved daily operations efficiency by initiating VBA and Power Query solutions
+              in Excel, creating new forms and revitalizing systems for student advising</li>
+          </ul>
+        </div>
+      </div><!-- End Right Column -->
+    </div>
+  </div>
+  <br><br><br><br>
+<!-- Horizontal Timeline Section -->
+<section id="timeline" class="resume section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Professional Journey Timeline</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up">
+    <div class="horizontal-timeline">
+      <div class="timeline-item">
+        <h4>August 2023 - Present</h4>
+        <p>Software Manager at Boeing</p>
+      </div>
+      <div class="timeline-item">
+        <h4>June 2023 - August 2023</h4>
+        <p>Data Analyst Intern at NASA</p>
+      </div>
+      <div class="timeline-item">
+        <h4>May 2022 - August 2023</h4>
+        <p>Technical Analyst Intern at Boeing</p>
+      </div>
+      <div class="timeline-item">
+        <h4>January 2022 – April 2022</h4>
+        <p>Technical Product Management Intern at StormwaterGO</p>
+      </div>
+      <div class="timeline-item">
+        <h4>October 2021 – April 2022</h4>
+        <p>College Advisor at BYU Ira. A Fulton College of Engineering</p>
+      </div>
+    </div>
+  </div>
+</section><br><br><br><br><br><br><br><br>
+
+
+
+</section><!-- End Resume Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Volunteering</h2>
+    <p>Dedicated to community service and leadership development</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-rocket"></i>
+          </div>
+          <a href="https://www.boeing.com/sustainability/university-relations" class="stretched-link">
+            <h3>BYU Boeing Ambassador</h3>
+          </a>
+          <p>Represented BYU and Boeing in efforts to recruit talented students for aerospace and technology roles.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-rocket"></i>
+          </div>
+          <a href="https://weareboeingsc.com/featured-brg-boeing-women-inspiring-leadership/" class="stretched-link">
+            <h3>Boeing Women Inspiring Leadership (BWIL)</h3>
+          </a>
+          <p>Supported and mentored women at Boeing, fostering a community of professional growth and leadership.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item  position-relative">
+          <div class="icon">
+            <i class="bi bi-people"></i>
+          </div>
+          <a href="https://www.linkedin.com/company/byu-product-society" class="stretched-link">
+            <h3>BYU Product Society - President</h3>
+          </a>
+          <p>Led initiatives to provide resources and networking opportunities for students interested in product management.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-people"></i>
+          </div>
+          <a href="https://www.linkedin.com/company/byu-product-society" class="stretched-link">
+            <h3>BYU Product Society - VP of Events</h3>
+          </a>
+          <p>Organized student events and workshops to connect peers with industry professionals.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-music-note"></i>
+          </div>
+          <a href="https://www.nsd.org/schools/enrichment-activities/performances" class="stretched-link">
+            <h3>Violin Teacher - Northshore School District</h3>
+          </a>
+          <p>Taught violin to students of all ages, guiding them through regional music programs and competitions.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-music-note"></i>
+          </div>
+          <a href="https://music.byu.edu/events/orchestra" class="stretched-link">
+            <h3>BYU Symphony Orchestra</h3>
+          </a>
+          <p>Contributed as a violinist in various performances with the university orchestra.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Professional and Academic Projects</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">NASA</li>
+            <li data-filter=".filter-product">StormwaterGO</li>
+            <li data-filter=".filter-branding">Academic</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/portfolio/nasa.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>NASA Power Usage Effectiveness Presentation</h4>
+                <p>Final Slidshow Presentation</p>
+                <a href="assets/img/portfolio/nasa.png" title="NASA" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://docs.google.com/presentation/d/1_J0NP_CToDakICOfJ7uBeSuPGO68UbKK/edit?usp=sharing&ouid=106142924234051512691&rtpof=true&sd=true" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/portfolio/nasa1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>NASA Power Usage Effectiveness Dashboards</h4>
+                <p>Final Dashboards</p>
+                <a href="assets/img/portfolio/nasa1.png" title="NASA" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://drive.google.com/file/d/1jIQdkAoPbsI4ev5MoLnW5nO8tOKm71tg/view?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg" target="_blank"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/portfolio/StormwaterGO.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>StormwaterGO Final Presentation</h4>
+                <p>60+ Page Report</p>
+                <a href="assets/img/portfolio/StormwaterGO.png" title="StormwaterGO" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://drive.google.com/file/d/1_wBiakDYcXtsGv3e5lgrVyfT-IDa-yT8/view?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg" target="_blank"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/BeyondTheScreen.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>BYU Intex I - Full-Stack Development, & Machine Learning ft. 3D Heat Map</h4>
+                <p>Video of Completed Project - Placed 2nd Place Overall 2023</p>
+                <a href="assets/img/portfolio/BeyondTheScreen.png" title="StormwaterGO" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://youtu.be/w_PCukbiDSQ" title="More Details" class="details-link"><i class="bi bi-link-45deg" target="_blank"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/hackathon.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>BYU Hackathon</h4>
+                <p>Hackathon Presentation & Video</p>
+                <a href="assets/img/portfolio/hackathon.png" title="Academic" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://docs.google.com/presentation/d/1j-JxGcOKKIDqJN-OTyjGUlRt_YSuRPMD6SSOy8Irid8/edit?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg" target="_blank"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/intex22.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>BYU Intex II - Full-Stack Development, & Machine Learning ft. Live Chat</h4>
+                <p>Video of Deployed Website</p>
+                <a href="assets/img/portfolio/intex22.png" title="Academic" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://www.youtube.com/watch?v=guCifhvePHw&ab_channel=HeatherAliciaHarris" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/portfolio/stormwatergo1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>StormwaterGO Website Draft</h4>
+                <p>Website Draft</p>
+                <a href="assets/img/portfolio/stormwatergo1.png" title="StormwaterGO" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://aaaheather.github.io/stormwaterGOindex/index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/intex2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>BYU Intex II - Full-Stack Development, & Machine Learning ft. Live Chat</h4>
+                <p>Continued Video of Deployed Website</p>
+                <a href="assets/img/portfolio/intex2.png" title="Academic" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://www.youtube.com/watch?v=UoPs1cjQDg4&ab_channel=HeatherAliciaHarris" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/intexslides.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>BYU Intex I Slides</h4>
+                <p>Full Slidshow Presentation with Technical Feature Outlining</p>
+                <a href="assets/img/portfolio/intexslides.png" title="Academic" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://docs.google.com/presentation/d/1uIXmm4QMC9ks4uiNiFN2hfs9xuzgJSXinnjhqekcov4/edit?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/intex2slides.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>BYU Intex II Slides</h4>
+                <p>Full Slidshow Presentation with Technical Feature Outlining</p>
+                <a href="assets/img/portfolio/intex2slides.png" title="Academic" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://docs.google.com/presentation/d/1YsEB-xsofxLwKan9vZl3cw8zdzhKp3x0/edit?usp=sharing&ouid=106142924234051512691&rtpof=true&sd=true" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/intexmodeling.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Intex pandas Modeling Pipeline</h4>
+                <p>Full pandas code from Intex I Pipeline
+                </p>
+                <a href="assets/img/portfolio/intexmodeling.png" title="Academic" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://colab.research.google.com/drive/1XE01Yfex7g2kSRQ-4icroZj3mUZaq_Fp?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/modelingmidterm.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Machine Learning pandas Code</h4>
+                <p>Relevant pandas Code from Machine Learning Midterm</p>
+                <a href="assets/img/portfolio/modelingmidterm.png" title="Academic" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://colab.research.google.com/drive/1LCyXAQEyF-3UT3fTgAossvm9nG7uKgv5?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+<!-- Faq Section -->
+<section id="faq" class="faq section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5">
+          <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+          <p>
+            Here are some of the most commonly asked questions regarding Heather Alicia's business practices.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="faq-container">
+
+          <div class="faq-item faq-active">
+            <h3><span class="num">1.</span> <span>Are you willing to relocate?</span></h3>
+            <div class="faq-content">
+              <p>Yes, I am open to relocation opportunities based on the needs of the business and the growth opportunities they provide.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">2.</span> <span>What is your availability for starting a new position?</span></h3>
+            <div class="faq-content">
+              <p>I am available to start a new position with two weeks of notice, but I am also open to discussing a start date that aligns with the company's needs.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">3.</span> <span>What is your preferred method of communication?</span></h3>
+            <div class="faq-content">
+              <p>I prefer to be contacted via email, and typically respond within 24 hours. Texts, Calls, or LinkedIn Messages are also accepted, however I may respond at a slower rate.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">4.</span> <span>What kind of roles are you open to?</span></h3>
+            <div class="faq-content">
+              <p>I'm open to a variety of positions in both the tech and business fields, particularly in areas where I have relevant experience. These include roles in software management, full-stack development, data science, product management, and technical product leadership.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">5.</span> <span>Are you open to remote work?</span></h3>
+            <div class="faq-content">
+              <p>Yes, I am open to both remote and hybrid work arrangements, depending on the role and team structure.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Faq Section -->
+<section id="stats" class="stats section" style="background-image: url('assets/img/space.jpg'); background-size: cover; background-position: center;">
+  <div class="container position-relative">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center">
+          <div class="stat-box">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="2">0</span>
+            <p>Years of Tech Experience</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center">
+          <div class="stat-box">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="2">0</span>
+            <p>Years of Business Experience</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center">
+          <div class="stat-box">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">0</span>
+            <p>Companies</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center">
+          <div class="stat-box">
+            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="1000000" data-purecounter-duration="2">0</span>
+            <p>Dollars Saved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out regarding job opportunities, content release inquiries, or other questions</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>Preferred</p>
+                  <a href="mailto:aaaheather@gmail.com">aaaheather@gmail.com</a>
+
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Work Phone</h3>
+                  <p>Text or Call</p>
+                  <a href="tel:+14252362142">(425) 492-5068</a>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-chat flex-shrink-0"></i>
+                <div>
+                  <h3>LinkedIn Messaging</h3>
+                  <a href="https://www.linkedin.com/in/heather-alicia/">linkedin.com/in/heather-alicia</a>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+        </div>
+
+          </div>
+        </form><!-- End Contact Form -->
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        Designed by <a href="https://bootstrapmade.com/"><strong style="color: black;">Heather Alicia</a></strong>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/heather-alicia/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/heather.alicia.harris/"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      // Close banner functionality
+      document.getElementById('close-banner').addEventListener('click', function (event) {
+          event.preventDefault();  // Prevent default scrolling behavior
+          document.getElementById('popup-banner').style.display = 'none';
+      });
+  
+      const themeToggle = document.getElementById('theme-toggle');
+      const sunIcon = document.querySelector('.bi-sun');
+      const moonIcon = document.querySelector('.bi-moon');
+      const heroVideo = document.getElementById('hero-video'); // Video element
+      const heroImg = document.getElementById('hero-img');     // Image element
+      const heroImage2 = document.getElementById('hero-image-2'); // Image element for the second hero section
+  
+      const lightModeVideo = 'assets/img/p13light.mp4';        // Video for light mode
+      const darkModeVideo = 'assets/img/p4.mp4';               // Default dark mode video
+      const lightSleepMode = 'assets/img/lightsleepmode.png';  // Light sleep mode (PNG)
+      const darkSleepMode = 'assets/img/darksleepmode.png';    // Dark sleep mode (PNG)
+      const lightSadMode = 'assets/img/p13lightsad.mp4';       // Light sad mode video
+      const darkSadMode = 'assets/img/p4sad.mp4';              // Dark sad mode video
+      const lightModeImage2 = 'assets/img/blue.png';           // Light mode image for second hero section
+      const darkModeImage2 = 'assets/img/pic9.png';            // Dark mode image for second hero section
+  
+      // Theme toggle functionality
+      themeToggle.addEventListener('click', function () {
+          document.body.classList.toggle('light-mode');
+  
+          if (document.body.classList.contains('light-mode')) {
+              sunIcon.style.opacity = '1';
+              moonIcon.style.opacity = '0';
+              heroVideo.src = lightModeVideo;  // Switch to light mode video
+              heroVideo.style.display = 'block'; // Ensure video is displayed
+              heroImg.style.display = 'none';   // Hide image
+              heroImage2.src = lightModeImage2; // Switch to light mode image for second hero section
+              localStorage.setItem('theme', 'light');
+          } else {
+              sunIcon.style.opacity = '0';
+              moonIcon.style.opacity = '1';
+              heroVideo.src = darkModeVideo;   // Switch to dark mode video
+              heroVideo.style.display = 'block'; // Ensure video is displayed
+              heroImg.style.display = 'none';    // Hide image
+              heroImage2.src = darkModeImage2;   // Switch to dark mode image for second hero section
+              localStorage.setItem('theme', 'dark');
+          }
+      });
+  
+      // On page load, apply the saved theme and video/image
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+          document.body.classList.add('light-mode');
+          sunIcon.style.opacity = '1';
+          moonIcon.style.opacity = '0';
+          heroVideo.src = lightModeVideo;     // Set light mode video on load
+          heroImage2.src = lightModeImage2;   // Set light mode image for second hero section on load
+      } else {
+          document.body.classList.remove('light-mode');
+          sunIcon.style.opacity = '0';
+          moonIcon.style.opacity = '1';
+          heroVideo.src = darkModeVideo;      // Set dark mode video on load
+          heroImage2.src = darkModeImage2;    // Set dark mode image for second hero section on load
+      }
+  
+      // Add the animation controls arrow and nav bar (hidden initially)
+      const arrow = document.createElement('div');
+      arrow.id = 'easter-egg-arrow';
+      arrow.innerHTML = '<i class="bi bi-arrow-left-circle blinking"></i>';
+      document.body.appendChild(arrow);
+  
+      const navBar = document.createElement('div');
+      navBar.id = 'easter-egg-nav';
+      navBar.style.display = 'none'; // Initially hidden
+      navBar.innerHTML = `
+        <h5>Animation Controls</h5>
+        <p>Remote</p><br>
+        <button id="sleep-mode" class="btn btn-primary">
+          <i class="bi bi-moon"></i> Sleep Mode
+        </button><br><br>
+        <button id="power-off" class="btn btn-danger">  <!-- The btn-danger class makes it red -->
+          <i class="bi bi-power"></i> Power Off Animation
+        </button><br><br>
+        <button id="reset-mode" class="btn btn-info">
+          <i class="bi bi-arrow-clockwise"></i> Reset
+        </button>
+        <button id="close-controls" class="btn btn-secondary">
+          Close
+        </button>
+      `;
+      document.body.appendChild(navBar);
+  
+      // Make all text in the animation control black (for both light and dark mode)
+      const navControl = document.getElementById('easter-egg-nav');
+      navControl.style.color = 'black';  // Ensure text remains black regardless of the theme
+  
+      // Show/hide the animation controls on arrow click
+      document.getElementById('easter-egg-arrow').addEventListener('click', function () {
+          const nav = document.getElementById('easter-egg-nav');
+          if (nav.style.display === 'none') {
+              nav.style.display = 'block';
+          } else {
+              nav.style.display = 'none';
+          }
+      });
+  
+      // Add functionality to scroll to the top when buttons are clicked (except for the close button)
+      document.querySelectorAll('#easter-egg-nav .btn').forEach(button => {
+          if (!button.classList.contains('btn-secondary')) {  // Ensure close button is excluded
+              button.addEventListener('click', function () {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+              });
+          }
+      });
+  
+      // Sleep mode control (same button for both modes)
+      document.getElementById('sleep-mode').addEventListener('click', function () {
+          if (document.body.classList.contains('light-mode')) {
+              heroVideo.style.display = 'none';  // Hide video
+              heroImg.src = lightSleepMode;      // Set sleep mode image (light mode)
+              heroImg.style.display = 'block';   // Show image
+          } else {
+              heroVideo.style.display = 'none';  // Hide video
+              heroImg.src = darkSleepMode;       // Set sleep mode image (dark mode)
+              heroImg.style.display = 'block';   // Show image
+          }
+      });
+  
+      // Power off mode using modal instead of alert
+      document.getElementById('power-off').addEventListener('click', function () {
+          var myModal = new bootstrap.Modal(document.getElementById('powerOffModal'));
+          myModal.show();
+          
+          if (document.body.classList.contains('light-mode')) {
+              heroVideo.src = lightSadMode;  // Light sad mode video
+              heroVideo.style.display = 'block'; // Ensure video is displayed
+              heroImg.style.display = 'none';    // Hide image
+          } else {
+              heroVideo.src = darkSadMode;   // Dark sad mode video
+              heroVideo.style.display = 'block'; // Ensure video is displayed
+              heroImg.style.display = 'none';    // Hide image
+          }
+      });
+  
+      // Reset mode
+      document.getElementById('reset-mode').addEventListener('click', function () {
+          if (document.body.classList.contains('light-mode')) {
+              heroVideo.src = lightModeVideo;  // Reset to light mode video
+          } else {
+              heroVideo.src = darkModeVideo;   // Reset to dark mode video
+          }
+          heroVideo.style.display = 'block'; // Ensure video is displayed
+          heroImg.style.display = 'none';    // Hide image
+      });
+  
+      // Close controls
+      document.getElementById('close-controls').addEventListener('click', function (event) {
+          event.preventDefault();  // Prevent default scrolling behavior
+          document.getElementById('easter-egg-nav').style.display = 'none';
+      });
+  });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const statsLink = document.getElementById('stats-link');
+  
+      // Function to reset and reload the counters
+      function reloadStatsCounters() {
+          // Select all the counter elements
+          const counters = document.querySelectorAll('.purecounter');
+
+          // Reset the counters to 0 before starting the animation again
+          counters.forEach(counter => {
+              counter.textContent = '0'; // Reset the text content to '0'
+          });
+  
+          // Manually reinitialize PureCounter to count up again
+          if (typeof PureCounter !== 'undefined') {
+              // Re-initialize PureCounter
+              new PureCounter({
+                  selector: '.purecounter', // Selector to ensure PureCounter acts on the correct elements
+                  start: 0,
+                  duration: 2,  // Duration of the counter animation
+                  once: false   // Ensure the counter is animated multiple times, not just once
+              });
+          }
+      }
+  
+      // Add click event listener to the "Stats" link
+      statsLink.addEventListener('click', function (e) {
+          e.preventDefault(); // Prevent default anchor behavior
+          reloadStatsCounters(); // Call the function to reset and reload the counters
+  
+          // Scroll to the stats section smoothly
+          document.querySelector('#stats').scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+
+  
+</body>
+
+</html>
