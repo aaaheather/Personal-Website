@@ -1201,14 +1201,15 @@ section,
 /* Horizontal Timeline Styles */
 .horizontal-timeline {
   display: flex;
-  justify-content: space-evenly; /* Ensures even spacing between items */
+  justify-content: space-between; /* Ensure spacing between items */
   align-items: center;
-  position: absolute; /* Use absolute to control exact position */
-  left: 0; /* Start from the left edge */
-  right: 0; /* Extend to the right edge */
+  flex-wrap: wrap; /* Allow items to wrap when necessary */
+  position: relative;
   margin: 40px 0;
-  padding: 0 20px;
-  z-index: 2;
+  padding: 0;
+  width: 100%; /* Full width of the parent container */
+  left: 0; /* Ensure it starts from the left edge */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .horizontal-timeline::before {
@@ -1228,10 +1229,12 @@ section,
   background-color: #ffdd99; /* Normal background color */
   border-radius: 10px;
   text-align: center;
-  flex-basis: calc(20% - 40px);
+  flex: 1 1 calc(20% - 40px); /* Ensure items are of equal size and responsive */
   z-index: 2;
-  margin: 0 20px;
+  margin: 10px; /* Add some margin for spacing */
   transition: background-color 0.3s ease;
+  min-width: 150px; /* Prevent the items from shrinking too much */
+  box-sizing: border-box; /* Ensure padding and margin are accounted for */
 }
 
 .timeline-item h4 {
@@ -1254,6 +1257,30 @@ section,
   background-color: #f4f4f4; /* Hover background color */
 }
 
+/* Make the timeline responsive on smaller screens */
+@media (max-width: 1200px) {
+  .timeline-item {
+    flex: 1 1 calc(33.33% - 40px); /* On medium screens, show 3 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex: 1 1 calc(50% - 40px); /* On smaller screens, show 2 items per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-item {
+    flex: 1 1 100%; /* On extra small screens, each item takes full width */
+  }
+}
+
+/* Remove container padding */
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 
 
