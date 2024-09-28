@@ -1,4 +1,4 @@
-/*!
+/* !
  * Bootstrap Grid v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -4009,13 +4009,13 @@
   .pe-xxl-5 {
     padding-left: 3rem !important;
   }
-  .pb-xxl-0 {
+  /* .pb-xxl-0 {
     padding-bottom: 0 !important;
   }
   .pb-xxl-1 {
     padding-bottom: 0.25rem !important;
   }
-  .pb-xxl-2 {
+  .pb-xxl-2 { */
     padding-bottom: 0.5rem !important;
   }
   .pb-xxl-3 {

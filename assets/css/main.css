@@ -16,44 +16,44 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Yeseva One", serif;
-  --heading-font: "Yeseva One", serif;
-  --nav-font: "Yeseva One", serif;
+  --default-font: "Fraunces", serif;
+  --heading-font: "Fraunces", serif;
+  --nav-font: "Fraunces", serif;
 }
 
 :root {
   --background-color: #060606; /* Dark mode default */
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --default-color: #F5EFEB ;
+  --heading-color: #F5EFEB ;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-  --accent-color: #9dbff1;
+  --accent-color: #7499bd;
 
   /* Nav Menu Colors */
   --nav-color: #ffffff;
-  --nav-hover-color: #9dbff1;
+  --nav-hover-color: #9bb4d1;
   --nav-mobile-background-color: #252525;
   --nav-dropdown-background-color: #252525;
   --nav-dropdown-color: #ffffff;
-  --nav-dropdown-hover-color: #ffe5f7;
+  --nav-dropdown-hover-color: #000000;
 }
 
 /* Light Mode CSS variables */
 body.light-mode {
-  --background-color: #f9f9f9;
+  --background-color: #ffffff ;
   --default-color: #060606;
   --heading-color: #060606;
-  --surface-color: #ffffff;
-  --contrast-color: #060606;
-  --accent-color: #9dbff1;
+  --surface-color: #F5EFEB ;
+  --contrast-color: #050404;
+  --accent-color: #d7e4f0;
 
   /* Nav Menu Colors */
   --nav-color: #060606;
-  --nav-hover-color: #3393ff;
-  --nav-mobile-background-color: #ffffff;
+  --nav-hover-color: #9bb4d1;
+  --nav-mobile-background-color: #F5EFEB  ;
   --nav-dropdown-background-color: #ffffff;
   --nav-dropdown-color: #060606;
-  --nav-dropdown-hover-color: #3393ff;
+  --nav-dropdown-hover-color: #9bb4d1;
 }
 
 .hero {
@@ -74,11 +74,11 @@ body.light-mode {
 }
 
 .header .navmenu a {
-  color: #ffffff; /* White text for links */
+  color: #F5EFEB ; /* White text for links */
 }
 
 .header .navmenu a:hover {
-  color: #9dbff1; /* Hover color */
+  color: #000000; /* Hover color */
 }
 
 /* Light Mode (Navbar) */
@@ -92,7 +92,7 @@ body.light-mode .header .navmenu a {
 }
 
 body.light-mode .header .navmenu a:hover {
-  color: #3393ff; /* Hover color in light mode */
+  color: #ffffff; /* Hover color in light mode */
 }
 
 body.light-mode .hero:before {
@@ -176,6 +176,7 @@ body.dark-mode .theme-toggle .bi-sun {
 body.dark-mode .theme-toggle .bi-moon {
   opacity: 1;
   transform: rotate(30deg); /* Slight rotation effect */
+  color: white;
 }
 
 
@@ -197,8 +198,8 @@ body.dark-mode .theme-toggle .bi-moon {
   --background-color: #d7e4f0;
   --default-color: #000000;
   --heading-color: #ffffff;
-  --accent-color: #ffffff;
-  --surface-color: #3393ff;
+  --accent-color: #2F4156;
+  --surface-color: #d7e4f0 ;
   --contrast-color: #ffffff;
 }
 
@@ -373,14 +374,15 @@ h6 {
   .navmenu a:hover,
   .navmenu a:focus {
     background-color: var(--nav-hover-color); /* Hover color */
-    color: var(--contrast-color); /* Text color on hover */
+    color: var(--default-color); /* Text color on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
     text-decoration: none !important; /* Ensure no underlining */
+  
   }
 
   .navmenu .active {
-    background-color: var(--accent-color); /* Highlight color */
-    color: var(--contrast-color); /* Text color for active section */
+    background-color: #7499bd; /* Highlight color */
+    color: black; /* Text color for active section */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect for active link */
     border-radius: 200px; /* Rounded to match the nav bar */
     display: flex;
@@ -390,6 +392,20 @@ h6 {
     line-height: 30px; /* Match the line-height to the link height */
     padding: 0 20px; /* Horizontal padding for the active link */
   }
+
+  body.light-mode .navmenu .active {
+    background-color: var(--accent-color); /* Highlight color */
+    color: var(--default-color); /* Text color for active section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect for active link */
+    border-radius: 200px; /* Rounded to match the nav bar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px; /* Ensure active link is 30px */
+    line-height: 30px; /* Match the line-height to the link height */
+    padding: 0 20px; /* Horizontal padding for the active link */
+  }
+  
 
   /* Dropdown Menu Styling (Narrow Vertical Box) */
   .navmenu .dropdown ul {
@@ -448,7 +464,7 @@ h6 {
   }
 
   .navmenu .dropdown ul a:hover {
-    color: var(--contrast-color); /* Hover text color */
+    color: black; /* Hover text color */
   }
 }
 
@@ -1288,6 +1304,7 @@ img.transparent-image {
   align-items: center;
   flex-wrap: wrap; /* Allow items to wrap when necessary */
   position: relative;
+  color:black;
   margin: 40px 0;
   padding: 0;
   width: 100%; /* Full width of the parent container */
@@ -1309,7 +1326,8 @@ img.transparent-image {
 .timeline-item {
   position: relative;
   padding: 15px;
-  background-color: #ffdd99; /* Normal background color */
+  background-color: #F5EFEB ; /* Normal background color */
+  color: black;
   border-radius: 10px;
   text-align: center;
   flex: 1 1 calc(20% - 40px); /* Ensure items are of equal size and responsive */
@@ -1431,7 +1449,7 @@ img.transparent-image {
 
 .stats:before {
   content: "";
-  background: color-mix(in srgb,#d7e4f0, transparent 20%);
+  background: color-mix(in srgb,#d7e4f0, transparent 10%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1471,7 +1489,6 @@ img.transparent-image {
 #stats .stats-item p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.8);
@@ -1555,7 +1572,23 @@ img.transparent-image {
   left: 10px; /* Adjust this to control how much space is left on the sides */
   right: 10px; /* Adjust this to control how much space is left on the sides */
   height: 100%;
-  background: rgba(215, 228, 240, 0.5); /* New blue overlay with transparency */
+  color: #F5EFEB;
+  background: rgba(255, 255, 255, 0.8); /* New blue overlay with transparency */
+  opacity: 1; /* Visible by default */
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  border-radius: 15px; /* Rounds the blue overlay */
+}
+
+body.dark-mode .portfolio .portfolio-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px; /* Adjust this to control how much space is left on the sides */
+  right: 10px; /* Adjust this to control how much space is left on the sides */
+  height: 100%;
+  color: #F5EFEB;
+  background: rgba(0, 0, 0, 0.7); /* New blue overlay with transparency */
   opacity: 1; /* Visible by default */
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -1564,6 +1597,11 @@ img.transparent-image {
 
 /* Hide Blue Overlay on Hover */
 .portfolio .portfolio-item:hover::before {
+  opacity: 0; /* Disappear on hover */
+}
+
+/* Hide Blue Overlay on Hover */
+body.dark-mode .portfolio .portfolio-item:hover::before {
   opacity: 0; /* Disappear on hover */
 }
 
@@ -1679,6 +1717,13 @@ img.transparent-image {
 .faq .content h3 {
   font-weight: 400;
   font-size: 34px;
+  color:#d7e4f0;
+}
+
+body.light-mode .faq .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+  color:black;
 }
 
 .faq .content p {
@@ -1693,6 +1738,7 @@ img.transparent-image {
   margin-bottom: 20px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  
 }
 
 .faq .faq-container .faq-item:last-child {
@@ -1708,15 +1754,33 @@ img.transparent-image {
   cursor: pointer;
   display: flex;
   align-items: flex-start;
+  color: white;
+}
+
+body.light-mode .faq .faq-container .faq-item h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 30px 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  color: black;
 }
 
 .faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
+  color: white;
+  padding-right: 5px;
+}
+
+body.light-mode .faq .faq-container .faq-item h3 .num {
+  color: black;
   padding-right: 5px;
 }
 
 .faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
+  color:#d7e4f0;
 }
 
 .faq .faq-container .faq-item .faq-content {
@@ -1747,7 +1811,7 @@ img.transparent-image {
 }
 
 .faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
+  color:white;
 }
 
 .faq .faq-container .faq-active .faq-content {
@@ -1759,7 +1823,7 @@ img.transparent-image {
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
-  color: var(--accent-color);
+  color:black;
 }
 
 /*--------------------------------------------------------------
@@ -1772,7 +1836,7 @@ img.transparent-image {
 
 .testimonials:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 20%);
+  background: color-mix(in srgb, var(--surface-color), transparent 10%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1887,16 +1951,25 @@ img.transparent-image {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  color: white;
+}
+
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-bottom: 30px;
+  color: black;
 }
+
+body.dark-mode .contact .info-wrap {
+  color:white;
+} 
 
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
+  color: var(--default-color);
   width: 56px;
   height: 56px;
   display: flex;
@@ -1904,7 +1977,7 @@ img.transparent-image {
   align-items: center;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 40%);
   margin-right: 15px;
 }
 
@@ -1918,6 +1991,14 @@ img.transparent-image {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+}
+
+.contact .info-item a {
+  color: black;
+}
+
+body.dark-mode .contact .info-item a {
+  color: white;
 }
 
 .contact .info-item:hover i {
@@ -1952,7 +2033,7 @@ img.transparent-image {
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+  border-color: var(--default-color);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
@@ -1963,7 +2044,7 @@ img.transparent-image {
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--default-color);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
@@ -2225,7 +2306,24 @@ img.transparent-image {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #cad9f5;
+  background-color: #F5EFEB ;
+  color: #0c0c0c;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 16px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+body.dark-mode .popup-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d7e4f0; ;
   color: #0c0c0c;
   padding: 15px 20px;
   text-align: center;
@@ -2248,8 +2346,18 @@ img.transparent-image {
 }
 
 .close-banner-btn {
-  background-color: #9dbff1;
+  background-color: #d7e4f0;;
   color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+body.dark-mode .close-banner-btn {
+  background-color: #7499bd;;
+  color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
