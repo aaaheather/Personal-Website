@@ -809,8 +809,8 @@ section,
   right: 19px;
   top: 100px;
   width: 160px;
-  background-color: #f8f9fa;
-  color: black;
+  background-color: #1f1e1e;
+  color: white;
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -820,9 +820,9 @@ section,
   align-items: center;
 }
 
-.dark-mode #easter-egg-nav {
-  background-color: #1f1e1e;
-  color: white;
+.light-mode #easter-egg-nav {
+  background-color: #f8f9fa;
+  color: black;
 }
 
 /* Wrapper for the button container */
