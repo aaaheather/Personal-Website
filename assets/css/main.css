@@ -16,9 +16,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font: "Yeseva One", serif;
+  --heading-font: "Yeseva One", serif;
+  --nav-font: "Yeseva One", serif;
 }
 
 :root {
@@ -66,6 +66,11 @@ body.light-mode {
 .header {
   background-color: #000000; /* Dark background */
   color: #ffffff; /* White text */
+  font-style: italic;
+}
+
+.body {
+  font-style: italic;
 }
 
 .header .navmenu a {
@@ -96,6 +101,7 @@ body.light-mode .hero:before {
   position: absolute;
   inset: 0;
   z-index: 2;
+  font-style: italic;
 }
 
 body.light-mode .page-title {
@@ -104,6 +110,7 @@ body.light-mode .page-title {
   background-color: var(--background-color);
   padding: 25px 0;
   position: relative;
+  font-style: italic;
 }
 
 /* Light Mode for Headers and Hero Section */
@@ -321,8 +328,20 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 1200px) {
+  /* General nav menu styling */
   .navmenu {
-    padding: 0;
+    background-color: var(--surface-color); /* Nav menu background */
+    border-radius: 200px; /* Rounded corners for the nav menu section */
+    padding: 1px 20px; /* Padding inside the rounded box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    display: flex;
+    align-items: center;
+    height: 50px; /* Keep the nav menu height */
+  }
+
+  body.light-mode .navmenu {
+    background-color: var(--nav-mobile-background-color); /* Light mode background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Same shadow in light mode */
   }
 
   .navmenu ul {
@@ -331,126 +350,108 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    height: 100%; /* Ensure full height usage */
   }
 
   .navmenu li {
     position: relative;
   }
 
-  .navmenu>ul>li {
-    white-space: nowrap;
-    padding: 15px 14px;
-  }
-
-  .navmenu>ul>li:last-child {
-    padding-right: 0;
-  }
-
-  .navmenu a,
-  .navmenu a:focus {
+  .navmenu a {
     color: var(--nav-color);
-    font-size: 15px;
-    padding: 0 2px;
-    font-family: var(--nav-font);
-    font-weight: 400;
+    padding: 0 15px; /* Horizontal padding only */
+    border-radius: 200px; /* Rounded for consistency with the nav menu */
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none !important; /* Force remove underlining */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center;
+    height: 30px; /* Set links height to 30px */
+    line-height: 30px; /* Match the line-height to the link height */
+  }
+
+  .navmenu a:hover,
+  .navmenu a:focus {
+    background-color: var(--nav-hover-color); /* Hover color */
+    color: var(--contrast-color); /* Text color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
+    text-decoration: none !important; /* Ensure no underlining */
+  }
+
+  .navmenu .active {
+    background-color: var(--accent-color); /* Highlight color */
+    color: var(--contrast-color); /* Text color for active section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect for active link */
+    border-radius: 200px; /* Rounded to match the nav bar */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
+    justify-content: center;
+    height: 30px; /* Ensure active link is 30px */
+    line-height: 30px; /* Match the line-height to the link height */
+    padding: 0 20px; /* Horizontal padding for the active link */
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
-  }
-
-  .navmenu>ul>li>a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
-  .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
-  .navmenu .active:before {
-    visibility: visible;
-    width: 100%;
-  }
-
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
-  }
-
+  /* Dropdown Menu Styling (Narrow Vertical Box) */
   .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
+    background-color: var(--surface-color); /* Match the dropdown background with the main nav */
+    border-radius: 8px; /* Box style for dropdown */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for the dropdown */
+    padding: 0; /* No padding inside the dropdown */
     position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
+    top: calc(100% + 5px); /* Position dropdown just below the nav menu */
+    left: 0;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
+    width: 150px; /* Narrower dropdown width */
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    height: auto; /* Auto height for dropdown */
+    display: flex;
+    flex-direction: column; /* Vertical layout */
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
+  /* Ensure dropdown is visible on hover */
+  .navmenu .dropdown:hover ul {
     visibility: visible;
+    opacity: 1;
+  }
+
+
+  /* Dropdown item styling */
+  .navmenu .dropdown ul li {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px; /* Reduced padding for narrower dropdown */
+    height: 40px; /* Consistent height for each dropdown item */
+    background-color: var(--surface-color); /* Ensure background matches */
+    transition: background-color 0.3s ease, border-radius 0.3s ease; /* Smooth transitions */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Slight border between items */
+    border-radius: 8px; /* Subtle rounded dropdown highlight */
+  }
+
+  /* Hover effect */
+  .navmenu .dropdown ul li:hover {
+    background-color: var(--nav-hover-color); /* Hover effect for dropdown items */
+    border-radius: 200px; /* Rounded hover highlight */
+  }
+
+
+  /* Links inside dropdown */
+  .navmenu .dropdown ul a {
+    width: 100%; /* Full-width clickable link */
+    color: var(--nav-color); /* Text color for dropdown links */
+    text-decoration: none; /* Ensure no underlining */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
+    height: 100%; /* Full height of the dropdown item */
+  }
+
+  .navmenu .dropdown ul a:hover {
+    color: var(--contrast-color); /* Hover text color */
   }
 }
+
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
@@ -2259,4 +2260,3 @@ img.transparent-image {
 .close-banner-btn:hover {
   background-color: #9dbff1;
 }
-
