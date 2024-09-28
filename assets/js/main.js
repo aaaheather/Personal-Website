@@ -269,13 +269,5 @@
     timelineView.classList.toggle('hidden');
   });
 
-  document.querySelectorAll('.animation-control').forEach(button => {
-    button.addEventListener('click', (event) => {
-      if (!button.classList.contains('close-button')) { // Assuming the close button has a class 'close-button'
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
+  
+  
