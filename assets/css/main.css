@@ -803,84 +803,162 @@ section,
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 #easter-egg-nav {
   position: fixed;
-  right: 20px;
+  right: 19px;
   top: 100px;
-  width: 200px;
-  background-color: #cad9f5; /* Light blue background */
+  width: 160px;
+  background-color: #f8f9fa;
   color: black;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-}
-
-#easter-egg-nav h5,
-#easter-egg-nav p {
-  color: black; /* Ensure black text for both title and description */
-}
-
-#easter-egg-nav h5 {
-  font-weight: bold; /* Bold title */
-  margin-bottom: 10px;
-}
-
-#easter-egg-nav p {
-  font-style: italic; /* Italic text below the title */
-}
-
-.btn {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
   padding: 10px;
-  font-size: 14px;
-  border-radius: 15px; /* Rounded buttons */
-  background-color: #dce4f0; /* Match the general theme color */
-  color: rgb(255, 254, 254);
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--accent-color); /* Darker shade on hover */
-}
-
-#easter-egg-arrow {
-  position: fixed;
-  top: 150px; /* Adjust the value to place it right below the nav bar */
-  right: 20px;
-  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-#easter-egg-nav h5 {
-  font-weight: bold; /* Bold title */
-  margin-bottom: 10px;
+.dark-mode #easter-egg-nav {
+  background-color: #1f1e1e;
+  color: white;
 }
 
-#easter-egg-nav p {
-  font-style: italic; /* Italic text below the title */
-}
-
-.btn {
-  display: block;
+/* Wrapper for the button container */
+.button-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 8px; /* Rounded buttons */
-  background-color: #ffffff; /* Match the general theme color */
-  color: rgb(0, 0, 0);
+}
+
+/* Container that holds both button rows */
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  row-gap: 12px; /* Control vertical spacing */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Adjust margins for better vertical spacing */
+.button-container button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cedbe4;
+  color: black;
   border: none;
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: var(--accent-color); /* Darker shade on hover */
+/* Explicitly assign each button to its correct column */
+#blink {
+  grid-column: 1;
 }
+#no-blink {
+  grid-column: 1;
+}
+#sleep {
+  grid-column: 1;
+}
+#smile {
+  grid-column: 2;
+}
+#straight-face {
+  grid-column: 2;
+}
+#frown {
+  grid-column: 2;
+}
+
+button i {
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+.btn.active {
+  background-color: #73a0ca;
+  color: white;
+}
+
+#easter-egg-nav h5 {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Ensure close button is the same size and shape as the other buttons */
+#close-controls {
+  background-color: #000000;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 20px; /* Added margin to ensure spacing from bottom */
+}
+
+#close-controls:hover {
+  background-color: #0a0a0a;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  #easter-egg-nav {
+    width: 140px;
+  }
+
+  .button-container button {
+    width: 40px;
+    height: 40px;
+    margin: 6px 0; /* Adjust spacing */
+  }
+
+  button i {
+    font-size: 16px;
+  }
+
+  #close-controls {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #easter-egg-nav {
+    width: 120px;
+  }
+
+  .button-container button {
+    width: 35px;
+    height: 35px;
+    margin: 5px 0;
+  }
+
+  button i {
+    font-size: 14px;
+  }
+
+  #close-controls {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px; /* Adjust space at the bottom */
+  }
+}
+
 
 #easter-egg-arrow {
   position: fixed;
