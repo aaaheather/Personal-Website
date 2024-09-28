@@ -1,11 +1,3 @@
-/**
-* Template Name: DevFolio
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -43,7 +35,6 @@
         mobileNavToogle();
       }
     });
-
   });
 
   /**
@@ -177,7 +168,6 @@
         }
       }, false);
     });
-
   });
 
   /**
@@ -243,31 +233,28 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
 
+/**
+ * Ensure that all links except #navmenu and mobile nav links open in a new tab.
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all anchor elements except those inside the #navmenu and #mobile-navmenu
+  const allLinks = document.querySelectorAll('a:not(#navmenu a):not(#mobile-navmenu a):not(.stretched-link)');
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Select all anchor elements except those inside the #navmenu
-    const allLinks = document.querySelectorAll('a:not(#navmenu a)');
-
-    // Iterate over each anchor element
-    allLinks.forEach(link => {
-      // Set the target attribute to "_blank" to open in a new tab
-      link.setAttribute('target', '_blank');
-    });
+  // Set target="_blank" to open in a new tab for all non-navmenu links
+  allLinks.forEach(link => {
+    link.setAttribute('target', '_blank');
   });
 
-  document.getElementById('toggle-view-btn').addEventListener('click', function() {
-    const normalView = document.getElementById('normal-resume');
-    const timelineView = document.getElementById('timeline-resume');
-    normalView.classList.toggle('hidden');
-    timelineView.classList.toggle('hidden');
+  // Ensure navmenu links (both desktop and mobile) do NOT open in a new tab
+  const navmenuLinks = document.querySelectorAll('#navmenu a, #mobile-navmenu a');
+  navmenuLinks.forEach(navLink => {
+    navLink.removeAttribute('target'); // Ensure navmenu links open in the same tab
   });
-
-  
-  
+});
