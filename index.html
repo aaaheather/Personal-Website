@@ -40,24 +40,6 @@
 
 <body class="index-page">
 
-<!-- Modal for Power Off -->
-<div class="modal fade" id="powerOffModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Message from Heather Alicia:</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Why would you try to turn me off?
-            </div>
-<!--hello-->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
   <!-- Popup Banner -->
   <div id="popup-banner" class="popup-banner">
@@ -98,7 +80,16 @@
     </div>
   </header>
 
-  </header>
+  <nav id="mobile-navmenu" class="mobile-navmenu d-flex d-xl-none fixed-bottom">
+    <ul class="d-flex justify-content-around w-100">
+      <li><a href="#hero" class="active"><i class="bi bi-house-door"></i><span>Home</span></a></li>
+      <li><a href="#testimonials"><i class="bi bi-chat-quote"></i><span>Testimonials</span></a></li> <!-- Testimonials added -->
+      <li><a href="#resume"><i class="bi bi-file-earmark-text"></i><span>Resume</span></a></li>
+      <li><a href="#portfolio"><i class="bi bi-collection"></i><span>Portfolio</span></a></li>
+      <li><a href="#contact"><i class="bi bi-envelope"></i><span>Contact</span></a></li>
+    </ul>
+  </nav>
+
 
   <main class="main">
 
@@ -144,6 +135,24 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
+                <img src="assets/img/testimonials/jason.jpg" class="testimonial-img" alt="">
+                <h3>Jason Storey</h3>
+                <h4>Product Specialist @ Signals • Marketing Strategy • Demand Gen</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Heather served as the president of the Product Society, and I had the privilege of working alongside her as one of her VPs. In her role, she effectively taught students early in their college careers about product management—what it is, how to gain experience, and how to stand out as a candidate. Heather consistently demonstrated creativity and innovation in her approach, which helped me learn how to work smarter, not harder, to achieve my own career goals.
+
+                    She possesses a strong ability to analyze problems and swiftly implement effective solutions. Additionally, her efficiency in streamlining processes not only reduced errors but also saved valuable time for the team. I highly recommend Heather for any position that requires these skills and more.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
                 <img src="assets/img/testimonials/jules.jpg" class="testimonial-img" alt="">
                 <h3>Julianna Sookhoo Smith</h3>
                 <h4>Masters of Information Systems student at BYU Marriott School of Business | Brigham Young University | Advertising Specialist</h4>
@@ -184,7 +193,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"I have had the pleasure of working with Heather Alicia during our time at BYU, and I am continually impressed by her multifaceted skill set, work ethic, and leadership. Heather excels in both the technical and business aspects of her roles, seamlessly bridging the gap between software development and strategic business outcomes. Her proficiency in technologies like Python, JavaScript, and cloud platforms, coupled with her experience in leading cross-functional teams, make her a standout Software Manager. Heather’s ability to balance complex projects while fostering a collaborative environment speaks volumes about her dedication and capability. Any team would greatly benefit from her innovation, analytical mindset, and commitment to delivering high-quality results.</span>
+                  <span>"I have had the pleasure of working with Heather during our time at BYU, and I am continually impressed by her multifaceted skill set, work ethic, and leadership. Heather excels in both the technical and business aspects of her roles, seamlessly bridging the gap between software development and strategic business outcomes. Her proficiency in technologies like Python, JavaScript, and cloud platforms, coupled with her experience in leading cross-functional teams, make her a standout Software Manager. Heather’s ability to balance complex projects while fostering a collaborative environment speaks volumes about her dedication and capability. Any team would greatly benefit from her innovation, analytical mindset, and commitment to delivering high-quality results.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -345,7 +354,7 @@
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Resume</h2>
-    <a href="assets/HeatherAlicia'sResume.pdf" class="btn" download>Download PDF Resume</a>
+    <a href="assets/HeatherAlicia'sResume.pdf" class="btn" download>Download Resume PDF</a>
   </div><!-- End Section Title -->
   <div class="container">
     <div class="row">
