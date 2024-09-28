@@ -168,15 +168,15 @@ body.light-mode .portfolio-info h4{
   opacity: 0;
 }
 
-body.dark-mode .theme-toggle .bi-sun {
+.theme-toggle .bi-sun {
   opacity: 0;
   transform: rotate(-30deg); /* Slight rotation effect */
 }
 
-body.dark-mode .theme-toggle .bi-moon {
+.theme-toggle .bi-moon {
   opacity: 1;
   transform: rotate(30deg); /* Slight rotation effect */
-  color: white;
+  color: var(--accent-color);
 }
 
 
@@ -313,6 +313,7 @@ h6 {
   margin-right: 8px;
 }
 
+/* Default Header Logo */
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
@@ -322,6 +323,76 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  z-index: 1; /* Ensure it's above other elements */
+}
+
+/* Ensure footer stays above the mobile menu */
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: 100px; /* Adjust this value to add space above the mobile menu */
+  }
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .social-links {
+  margin-top: 20px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--default-color);
+  border-color: var(--default-color);
+}
+
+.footer .credits {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.footer .credits a {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/* Light Mode for Footer */
+body.light-mode .footer {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+}
+
+body.light-mode .footer .social-links a {
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+body.light-mode .footer .credits a {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
 /*--------------------------------------------------------------
@@ -468,179 +539,73 @@ h6 {
   }
 }
 
-
-/* Mobile Navigation */
+/* Desktop Navigation - Hidden on Mobile */
 @media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-  }
-
-  .navmenu ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-  }
-
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  }
-
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
-
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
-  }
-
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
-  }
-
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-
-  .mobile-nav-active .navmenu>ul {
-    display: block;
+  #navmenu {
+    display: none !important; /* Hide desktop nav on mobile */
   }
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding: 40px 0;
-  position: relative;
+/* Mobile Navigation - Fixed at the Bottom */
+.mobile-navmenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--nav-mobile-background-color);
+  padding: 10px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9998; /* Ensure it's behind the popup banner and back-to-top arrow */
 }
 
-.footer .copyright p {
-  margin-bottom: 0;
-}
-
-.footer .social-links {
-  margin-top: 20px;
-}
-
-.footer .social-links a {
+.mobile-navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0 5px;
-  transition: 0.3s;
 }
 
-.footer .social-links a:hover {
-  color: var(--default-color);
-  border-color: var(--default-color);
+.mobile-navmenu a {
+  color: var(--nav-color);
+  text-decoration: none;
+  font-size: 12px; /* Smaller font size for the text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer .credits {
-  margin-top: 10px;
-  font-size: 13px;
-  text-align: center;
+.mobile-navmenu a i {
+  font-size: 24px; /* Icon size */
+  margin-bottom: 2px; /* Space between icon and text */
 }
 
-.footer .credits a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+.mobile-navmenu a span {
+  font-size: 10px; /* Smaller text under icons */
+}
+
+/* Active Mobile Link Styling */
+.mobile-navmenu a.active {
+  color: var(--active-color);
+}
+
+.mobile-navmenu a.active i {
+  color: var(--active-color);
+}
+
+/* Hover Effect */
+.mobile-navmenu a:hover {
+  color: var(--hover-color);
+}
+
+.mobile-navmenu a:hover i {
+  color: var(--hover-color);
+}
+
+/* Popup Banner in Front */
+#popup-banner {
+  z-index: 9999; /* Popup banner should be above mobile nav */
 }
 
 /*--------------------------------------------------------------
@@ -676,40 +641,6 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-}
-
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
-.scroll-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: -15px;
-  z-index: 99999;
-  background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.scroll-top i {
-  font-size: 24px;
-  color: var(--contrast-color);
-  line-height: 0;
-}
-
-.scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
-}
-
-.scroll-top.active {
-  visibility: visible;
-  opacity: 1;
-  bottom: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -1093,6 +1024,18 @@ img.transparent-image {
 .hero p span {
   letter-spacing: 1px;
 }
+/* Light mode styling for hero section text */
+body.light-mode .hero h2 {
+  color: var(--surface-color) !important; /* Title color in light mode */
+}
+
+body.light-mode .hero p {
+  color: var(--surface-color) !important; /* Paragraph text color in light mode */
+}
+
+body.light-mode .hero p .typed {
+  color: var(--surface-color) !important; /* Typed text color in light mode */
+}
 
 @media (max-width: 768px) {
   .hero h2 {
@@ -1324,6 +1267,21 @@ img.transparent-image {
 }
 
 .timeline-item {
+  position: relative;
+  padding: 15px;
+  background-color: var(--accent-color) ; /* Normal background color */
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1 1 calc(20% - 40px); /* Ensure items are of equal size and responsive */
+  z-index: 2;
+  margin: 10px; /* Add some margin for spacing */
+  transition: background-color 0.3s ease;
+  min-width: 150px; /* Prevent the items from shrinking too much */
+  box-sizing: border-box; /* Ensure padding and margin are accounted for */
+}
+
+body.light-mode .timeline-item {
   position: relative;
   padding: 15px;
   background-color: #F5EFEB ; /* Normal background color */
@@ -1565,22 +1523,8 @@ img.transparent-image {
 }
 
 /* New Blue Top Overlay - Visible by Default */
+/* New Blue Top Overlay - Visible by Default */
 .portfolio .portfolio-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10px; /* Adjust this to control how much space is left on the sides */
-  right: 10px; /* Adjust this to control how much space is left on the sides */
-  height: 100%;
-  color: #F5EFEB;
-  background: rgba(255, 255, 255, 0.8); /* New blue overlay with transparency */
-  opacity: 1; /* Visible by default */
-  transition: opacity 0.4s ease;
-  z-index: 1;
-  border-radius: 15px; /* Rounds the blue overlay */
-}
-
-body.dark-mode .portfolio .portfolio-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1593,6 +1537,27 @@ body.dark-mode .portfolio .portfolio-item::before {
   transition: opacity 0.4s ease;
   z-index: 1;
   border-radius: 15px; /* Rounds the blue overlay */
+  border-style:solid; /* Adds a border style */
+  border-color:var(--surface-color); /* Border color */
+  border-width: 9px; /* You can adjust this as needed */
+}
+
+body.light-mode .portfolio .portfolio-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px; /* Adjust this to control how much space is left on the sides */
+  right: 10px; /* Adjust this to control how much space is left on the sides */
+  height: 100%;
+  color: #F5EFEB;
+  background: rgba(255, 255, 255, 0.8); /* New blue overlay with transparency */
+  opacity: 1; /* Visible by default */
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  border-radius: 15px; /* Rounds the blue overlay */
+  border-style:solid; /* Adds a border style */
+  border-color: rgba(245,	239,	235, 0.9); /* Border color */
+  border-width: 3px; /* You can adjust this as needed */
 }
 
 /* Hide Blue Overlay on Hover */
@@ -1601,7 +1566,7 @@ body.dark-mode .portfolio .portfolio-item::before {
 }
 
 /* Hide Blue Overlay on Hover */
-body.dark-mode .portfolio .portfolio-item:hover::before {
+body.light-mode .portfolio .portfolio-item:hover::before {
   opacity: 0; /* Disappear on hover */
 }
 
@@ -1717,7 +1682,7 @@ body.dark-mode .portfolio .portfolio-item:hover::before {
 .faq .content h3 {
   font-weight: 400;
   font-size: 34px;
-  color:#d7e4f0;
+  color:var(--accent-color);
 }
 
 body.light-mode .faq .content h3 {
@@ -1727,8 +1692,11 @@ body.light-mode .faq .content h3 {
 }
 
 .faq .content p {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: white;
+}
+
+body.light-mode .faq .content p {
+  color: black;
 }
 
 .faq .faq-container .faq-item {
@@ -1770,7 +1738,7 @@ body.light-mode .faq .faq-container .faq-item h3 {
 }
 
 .faq .faq-container .faq-item h3 .num {
-  color: white;
+  color: var(--accent-color);
   padding-right: 5px;
 }
 
@@ -1811,7 +1779,7 @@ body.light-mode .faq .faq-container .faq-item h3 .num {
 }
 
 .faq .faq-container .faq-active h3 {
-  color:white;
+  color: var(--accent-color);
 }
 
 .faq .faq-container .faq-active .faq-content {
@@ -1955,17 +1923,29 @@ body.light-mode .faq .faq-container .faq-item h3 .num {
   color: white;
 }
 
+body.light-mode .contact {
+  color: black;
+}
+.contact .info-wrap {
+  color: var(--accent-color);
+} 
+
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-bottom: 30px;
-  color: black;
+  border-radius: 60px;
 }
 
-body.dark-mode .contact .info-wrap {
-  color:white;
-} 
+body.light-mode .contact .info-wrap {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  color: black;
+  border-radius: 60px;
+}
 
 .contact .info-item i {
   font-size: 20px;
@@ -1994,16 +1974,17 @@ body.dark-mode .contact .info-wrap {
 }
 
 .contact .info-item a {
+  color: var(--accent-color);
+}
+
+body.light-mode .contact .info-item a {
   color: black;
 }
 
-body.dark-mode .contact .info-item a {
-  color: white;
-}
 
 .contact .info-item:hover i {
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--default-color);
 }
 
 .contact .php-email-form {
@@ -2052,7 +2033,7 @@ body.dark-mode .contact .info-item a {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--contrast-color), transparent 20%);
 }
 
 /*--------------------------------------------------------------
@@ -2295,7 +2276,6 @@ body.dark-mode .contact .info-item a {
   margin-right: 8px;
   color: var(--accent-color);
 }
-
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
@@ -2306,33 +2286,21 @@ body.dark-mode .contact .info-item a {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #F5EFEB ;
+  background-color: #d7e4f0;
   color: #0c0c0c;
   padding: 15px 20px;
   text-align: center;
   font-size: 16px;
-  z-index: 9999;
+  z-index: 11001; /* Higher z-index to ensure it's in front of all elements, including scroll button */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
 
-body.dark-mode .popup-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #d7e4f0; ;
+body.light-mode .popup-banner {
+  background-color: #F5EFEB;
   color: #0c0c0c;
-  padding: 15px 20px;
-  text-align: center;
-  font-size: 16px;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
 }
 
 .popup-banner p {
@@ -2346,17 +2314,7 @@ body.dark-mode .popup-banner {
 }
 
 .close-banner-btn {
-  background-color: #d7e4f0;;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-left: 15px;
-}
-
-body.dark-mode .close-banner-btn {
-  background-color: #7499bd;;
+  background-color: #7499bd;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -2365,6 +2323,58 @@ body.dark-mode .close-banner-btn {
   margin-left: 15px;
 }
 
+body.light-mode .close-banner-btn {
+  background-color: #d7e4f0;
+  color: black;
+}
+
 .close-banner-btn:hover {
   background-color: #9dbff1;
 }
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 80px; /* Lowered from 100px to 80px */
+  z-index: 9998; /* Ensure it's behind the popup banner */
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 80px; /* Ensure consistent positioning when visible */
+}
+
+/* Ensure proper positioning on mobile */
+@media (max-width: 1199px) {
+  .scroll-top {
+    bottom: 70px; /* Adjust position for mobile nav */
+    z-index: 9998; /* Keep it below the popup banner */
+    width: 40px;
+    height: 40px;
+  }
+}
+

@@ -245,3 +245,29 @@ updateMedia();  // Ensure the media matches the saved theme
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the close button and other animation control buttons
+  const closeControlsBtn = document.getElementById('close-controls');
+  const allControlButtons = document.querySelectorAll('#easter-egg-nav .btn'); // Select all buttons inside the animation controls
+
+  // Add event listener to each control button
+  allControlButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      // Check if it's not the close button
+      if (button !== closeControlsBtn) {
+        // Scroll to the top smoothly
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Close controls button functionality
+  closeControlsBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('easter-egg-nav').style.display = 'none';
+  });
+});
