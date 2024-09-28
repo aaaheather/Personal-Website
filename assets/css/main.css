@@ -1023,6 +1023,10 @@ button i {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+img.transparent-image {
+  opacity: 0.5; /* Adjust this value between 0 (fully transparent) to 1 (fully opaque) */
+}
+
 .hero {
   width: 100%;
   min-height: calc(100vh - 92px);
