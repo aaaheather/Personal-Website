@@ -15,8 +15,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
- 
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+SC:wght@300;400;500;600;700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Prata&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -26,24 +26,19 @@
 
   <meta property="og:title" content="Heather Alicia" />
   <meta property="og:description" content="Resume & Projects" />
-  <meta property="og:image" style="width: 500px; height: 630px; opacity: 0.5" alt="Transparent Thumbnail" content="assets/img/lightnoblink.png" />
+  <meta property="og:image" content="assets/img/lightnoblink.png" />
   <meta property="og:image:alt" content="Cover Image" />
   <meta property="og:url" content="heatheralicia.com" />
   <meta property="og:type" content="website" />
-  <meta property="og:image:width" content="500" />
-  <meta property="og:image:height" content="630" />
 
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/modes.js"></script>
-
-  
-  
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/resume.css" rel="stylesheet">  
+  <link href="assets/css/resume.css" rel="stylesheet">
 
-  
-  
+</head>
+
+<body class="resumepage">
+
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
@@ -52,17 +47,17 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
           <li class="dropdown">
             <a href="#"><span>More</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#services">Volunteering</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#stats" id="stats-link">Stats</a></li>
+              <li><a href="index.html#services">Volunteering</a></li>
+              <li><a href="index.html#portfolio">Portfolio</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+              <li><a href="index.html#stats" id="stats-link">Stats</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
@@ -76,26 +71,19 @@
     </div>
   </header>
 
-</head>
+  <main class="main">
+    <!-- Download Button -->
+    <div class="resume-container">
+      <a href="assets/HeatherAlicia'sResume.pdf" class="btn btn-primary download-button" download>Download My Resume (PDF)</a>
 
-<body style="background-image: url('assets/resumebackground.png');" class="resumepage">
-
-  
-    <!-- Popup Banner -->
-    <div id="popup-banner" class="popup-banner">
-      <p>This site is owned and designed by <b>Heather Alicia</b>. For content release, please refer to the contact information below.</p>
-      <button id="close-banner" class="close-banner-btn">Close</button>
+      <!-- Embed PDF Resume in the center -->
+      <iframe src="assets/HeatherAlicia'sResume.pdf" type="application/pdf" width="800px" height="1000px" style="border: none;"></iframe>
     </div>
-  
-    <main class="main">
-      <!-- Download Button at the top -->
-      <a href="assets/HeatherAlicia'sResume.pdf" class="download-button" download>Download My Resume (PDF)</a>
-  
-      <div class="resume-container">
-        <!-- Display Resume Image -->
-        <img src="assets/resume.png" alt="Heather Alicia Resume" class="resume-image">
-      </div>
-    </main>
-  
-  </body>
-  </html>
+  </main>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modes.js"></script>
+</body>
+
+</html>
